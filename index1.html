@@ -1,15 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 	<html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-        <script src="./angularjs/angular.js"></script>
-        <script src="angularjs/angular-route.js"></script>
-        <script src="app/user.js" ></script>
-        <!-- <script src="bootstrap/js/bootstrap.js"></script> -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./angularjs/angular.js"></script>
+    <script src="./angularjs/angular-route.js"></script>
+    <script src="./app/user.js" ></script>
+   
+    <!-- <script src="bootstrap/js/bootstrap.js"></script> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <script src="./jquery-3.3.1.min.js"></script>
+    <script src="./Popper/popper.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
        <style>
                         #bor {
                            color: black;
@@ -56,9 +57,9 @@
 }
                         </style>
 </head>
-        <body ><nav class="navbar navbar-expand-bg bg-warning navbar-dark ">
+        <body ng-app="appMy" ng-controller="myCtrl"><nav class="navbar navbar-expand-bg  navbar-dark " style="background-color:rgb(158, 255, 30);">
               
-                <div class="navbar >
+                <div class="navbar" style="color: black; font-family: fantasy ;">
                     <a  href="#" style="color: black; font-family: fantasy ;width: max-content"> <i class="fas fa-clock" style="color: red"></i>Hotline (+088 0191177555) 9:00 AM - 2 :00 PM  </a>
                     <a class="active" href="#" style="color: black;">| |<i class="fa fa-fw fa-home"></i> Home  </a>
                  
@@ -81,19 +82,19 @@
                           <h6 style="color: black; font-family: fantasy">home> online Shop> bye&sale> home delivery> stay safe>satisfaction<i class="fa fa-fw fa-heart"style="color: red"></i></h6>
                       
                           <div class="dropdown">                                                             
-  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bars"></i >Menu</button>
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"   style="font-family: fantasy"><i class="fas fa-bars"></i >Menu</button>
      
-    <a href="#" class="add-project btn btn-danger" data-toggle="modal" data-target="#add_project"><i class="fa fa-fw fa-user""></i >Login</a>
-  <button type="button" class="btn btn-success"><i class="fas fa-file"></i> Register</button>
+    <a href="#" class="add-project btn btn-danger" data-toggle="modal" data-target="#add_project"   style="font-family: fantasy"><i class="fa fa-fw fa-user""></i >Login</a>
+  <button type="button" class="btn btn-success"   style="font-family: fantasy"><i class="fas fa-file" ></i> Register</button>
 
-  <button type="button" class="btn btn-warning"><i class="fas fa-car"></i> Home Delivery</button>
-  <button type="button" class="btn btn-info"> More Shopping</button>
+  <button type="button" class="btn btn-warning"  style="font-family: fantasy"><i class="fas fa-car"  ></i> Home Delivery</button>
+  <button type="button" class="btn btn-info"   style="font-family: fantasy"><i class="fas fa-wallet" ></i> More Shopping</button>
   <div class="dropdown-menu" style="background-color: azure">
     <a class="dropdown-item" href="#">*Daily Product*</a>
     <a class="dropdown-item" href="#">*Home Product* </a>
     <a class="dropdown-item" href="#">*Baby Product*</a>
   </div></div>
-  <br><br>
+  
  <br>
   <div class="active-pink-2 mb-2" ng-controller="myctrl">
       <input class="form-control" type="text" placeholder="Search" ng-model="searchBox" aria-label="Search">    
@@ -105,60 +106,9 @@
    <div class="col-sm-1" ><img src="image\Cart_i4-128.png"></img>  </div> 
 </div><br>
 
-<div  ng-app="appMy">
 
-    <div class=" row">
-        <div class="col-sm-12  width="1000" height="50"">
-    <div  class="carousel slide" data-ride="carousel">
-        <ul class="carousel-indicators">
-                        <li data-target="#" data-slide-to="0" class="active"></li>
-                        <li data-target="#" data-slide-to="1"></li>
-                        <li data-target="#" data-slide-to="2"></li>
-                        <li data-target="#" data-slide-to="3"></li>
-                      </ul>
-              
-        <div class="carousel-inner img ">
-            <div class="carousel-item active">
-                <img src="image\Drinkit-banner.jpg" alt="New York" width="1000" height="50">
-          <div class="carousel-caption">
-          <h3>Best Offer</h3>
-         <p>We wisg you love the offer!</p>
-         </div>   
-         </div>
-
-
-          <div class="carousel-item ">
-                        <img src="image\99Tk T-shirt-banner H.jpg" alt="Los Angeles" width="1000" height="50">
-            <div class="carousel-caption">
-              <h3>Boys T-shirt</h3>
-              <p>We had such a great offer%</p>
-            </div>   
-          </div>
-          <div class="carousel-item">
-                        <img src="image\Ladies Inner H 24 Sep 2019.jpg" alt="Chicago" width="1000" height="50">
-            <div class="carousel-caption">
-              <h3>Ladies Product</h3>
-              <p>Thank you, for watching!</p>
-            </div>   
-          </div>
-          <div class="carousel-item">
-                        <img src="image\Kellys offer H Banner 22 Sep 2019.jpg" alt="New York" width="1000" height="50">
-            <div class="carousel-caption">
-              <h3>Best Offer</h3>
-              <p>We wisg you love the offer!</p>
-            </div>   
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#" data-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#" data-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </a>
-      </div> </div></div><br><br><br>
-
-
-      <div class=" row">
+     <div ng-app="appMy">
+      <div class=" row"  >
                 
         <div class="col-sm-3"  id="bor" >
           <h3 style="color:violet; font-weight: bold; font-family: fantasy; text-align: center"><u>Product List</u> </h3> 
@@ -185,90 +135,79 @@
             
 
         </div><br><br><br><br>
+        
+                      
+                   
+                     <div class="col-sm-7">
+                      <div class="row justify-content-center">                
+                        <div class="col-md-5">
+                            <div class="text-danger text-title">Customer Form</div>
+                            <form name="lf">
+                                <div class="form-group">
+                                    <label for="username">ADDRESS :</label>
+                                    <input type="text" class="form-control" ng-model="username"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Contact :</label>
+                                    <input type="password" class="form-control" ng-model="password"/>                        
+                                </div>                    
+                           
+                                <a href="index.html" class="btn btn-success" >submit</a>
+                            
+                            </form>
+                        </div>
+                    </div>
+                     </div>
+                    
+                    </div>  </div><br><br>
+                  
+
+
+          <div id="add_project" class="modal fade width=200px"  role="dialog" >
+          <div class="modal-dialog">
   
-         <div class="col-sm-9" >
-                        <ng-view></ng-view>
-                      
-<div class="row" style="background-color:lightcyan">
-  <div class="col-sm-3">
-          <div class="card" style="width:200px;background-color: lightcyan">
-                  <img class="card-img-top" src="image\3369944.jpg" alt="Card image" style="width:100%">
-                  <div class="card-body" style="font-family: fantasy">
-                    <h4 class="card-title">**T-SHIRT**</h4>
-                    <p class="card-text">Price 550 TK</p>
-                    <a href="#" class="btn btn-info">Add To Cart</a>
+              <!-- Modal content-->
+              <div class="modal-content"  ng-app="appMy" ng-controller="myCtrl">
+                <!-- <form >
+                  <input type="text" name="userId" ng-model="userId" />
+                  <input type="password" name="password" ng-model="password" />
+                  <button type="submit" ng-click="login()" >Submit</button>
+                  <a href="#!signUp" >SignUp</a>
+              </form> -->
+                  <div class="modal-header login-header">
+                      <button type="button" class="close" data-dismiss="modal">×</button>
+                   
+                      <h3 class="modal-title" style="background-color: rgb(59, 238, 238); font-family:fantasy; text-align:center">Customer Login</h3>
                   </div>
-                </div>
-  </div>
-  <div class="col-sm-3">   <div class="card" style="width:200px;background-color: lightcyan">
-    <img class="card-img-top" src="image\3369929.jpg" alt="Card image" style="width:100%">
-    <div class="card-body" style="font-family: fantasy">
-      <h4 class="card-title">**T-SHIRT**</h4>
-      <p class="card-text">Price 550 TK</p>
-      <a href="#" class="btn btn-info">Add To Cart</a>
-    </div>
-  </div></div>
-  <div class="col-sm-3">   <div class="card" style="width:200px;background-color: lightcyan">
-    <img class="card-img-top" src="image\3369934.jpg" alt="Card image" style="width:100%">
-    <div class="card-body" style="font-family: fantasy">
-      <h4 class="card-title">**T-SHIRT**</h4>
-      <p class="card-text">Price 550 TK</p>
-      <a href="routes/loginfinal.html" class="btn btn-info">Add To Cart</a>
-    </div>
-  </div></div>
-  <div class="col-sm-3">   <div class="card" style="width:200px;background-color: lightcyan">
-    <img class="card-img-top" src="image\3369944.jpg" alt="Card image" style="width:100%">
-    <div class="card-body" style="font-family: fantasy">
-      <h4 class="card-title">**T-SHIRT**</h4>
-      <p class="card-text">Price 550 TK</p>
-      <a href="#" class="btn btn-info">Add To Cart</a>
-    </div>
-  </div></div>
-</div>
-
-<div class="row" style="background-color:lightcyan">
-<div class="col-sm-3">
-    <div class="card" style="width:200px;background-color: lightcyan">
-            <img class="card-img-top" src="image\3372170.jpg" alt="Card image" style="width:100%">
-            <div class="card-body" style="font-family: fantasy">
-              <h4 class="card-title">**Chirar Moya**</h4>
-              <p class="card-text">Price 550 TK</p>
-              <a href="#" class="btn btn-info">Add To Cart</a>
-            </div>
+                  <div class="modal-body" style="background-color: rgb(62, 247, 247);" >
+                    <form>
+                      <div class="input-group form-group" >
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="username"   ng-model="userId" name="userId">
+                        
+                      </div>
+                      <div class="input-group form-group"  >
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <input type="password" class="form-control" placeholder="password" ng-model="password" name="password">
+                      </div>
+                      <div class="row align-items-center remember">
+                        <input type="checkbox">Remember Me
+                      </div>
+                   
+                    </form>
+                      </div>
+                  <div class="modal-footer" >
+                      <button class="btn btn-info" class="cancel" data-dismiss="modal"  ng-click="login()" >Sign In</button>
+                      <button class="btn btn-info"  class="add-project" data-dismiss="modal">Reset</button>
+                  </div>
+              </div>
+  
           </div>
-</div>
-<div class="col-sm-3">   <div class="card" style="width:200px;background-color: lightcyan">
-<img class="card-img-top" src="image\3371760.jpg" alt="Card image" style="width:100%">
-<div class="card-body" style="font-family: fantasy">
-<h4 class="card-title">**Murali**</h4>
-<p class="card-text">Price 550 TK</p>
-<a href="#" class="btn btn-info">Add To Cart</a>
-</div>
-</div></div>
-<div class="col-sm-3">   <div class="card" style="width:200px;background-color: lightcyan">
-<img class="card-img-top" src="image\3372068.jpg" alt="Card image" style="width:100%">
-<div class="card-body" style="font-family: fantasy">
-<h4 class="card-title">**Chira Vaja**</h4>
-<p class="card-text">Price 550 TK</p>
-<a href="#" class="btn btn-info">Add To Cart</a>
-</div>
-</div></div>
-<div class="col-sm-3">   <div class="card" style="width:200px;background-color: lightcyan">
-<img class="card-img-top" src="image\3372166.jpg" alt="Card image" style="width:100%">
-<div class="card-body" style="font-family: fantasy">
-<h4 class="card-title">**Narcel naru**</h4>
-<p class="card-text">Price 550 TK</p>
-<a href="#" class="btn btn-info">Add To Cart</a>
-</div>
-</div></div>
-</div><br><br><br><br> 
-                      
-                      
-                     </div> </div><br><br>
-                        <img src="image\Screenshot (20).png">
-
-
-       
+      </div>
      
 
 

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<script src = "js/angular.js"></script>
+		<script src = "js/app.js"></script>
+		<meta charset = "UTF-8" name = "viewport" content = "width=device-width, initial-scale=1" />
+		<link rel = "stylesheet" type = "text/css" href = "css/bootstrap.css"/>
+		<link rel = "stylesheet" type = "text/css" href = "css/style.css"/>
+		
+        <script src="./jquery-3.3.1.min.js"></script>
+        <script src="./Popper/popper.min.js"></script>
+        <script src="./bootstrap/js/bootstrap.min.js"></script>
+		
+
+	</head>
+<body ng-app = "myModule" ng-controller = "myController" >
+		<nav class="navbar navbar-expand-bg  navbar-dark " style="background-color:rgb(158, 255, 30);">
+              
+                <div class="navbar" style="color: black; font-family: fantasy ;">
+                    <a  href="#" style="color: black; font-family: fantasy ;width: max-content"> <i class="fas fa-clock" style="color: red"></i>Hotline (+088 0191177555) 9:00 AM - 2 :00 PM  </a>
+                    <a class="active" href="#" style="color: black;">| |<i class="fa fa-fw fa-home"></i> Home  </a>
+                 
+                    <a href="#" style="color: black;">| |<i class="fa fa-fw fa-envelope"></i> Contact  </a>
+                     <a href="#" style="color: black;">| |<i class="fas fa-band-aid"></i> Help</a>
+                  </div>
+                  <form class="form-inline float-right" >
+                      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                      <button class="btn btn-info" type="submit"><i class="fa fa-fw fa-search"></i>Search</button>
+					
+                    </form>
+                    </nav>
+              
+	<div class = "col-md-3">
+			<img src="image/loading.gif">
+			<div class = "panel panel-success">
+					<div class = "panel-heading">
+						
+						<h5>CHECK YOUR CART</h5>
+						
+					</div>
+					<div class = "panel-body table-responsive">
+						<table class = "table">
+							<thead>
+								<tr>
+									<th>Product</th>
+									<th>Price</th>
+									<th>Quantity</th>
+								
+								</tr>
+							</thead>
+							<tbody >
+								<tr ng-repeat = "cart in carts" ng-init = "setTotals(cart)">
+									<td>{{cart.p_name}}</td>
+									<td>TK.{{cart.p_price}}</td>
+									<th>{{cart.p_qty}}</th>
+									<td><button type = "button" ng-click = "remove_cart(cart)" class = "btn btn-danger"><span class = "glyphicon glyphicon-remove"></span>Remove item</button></td>
+								</tr>
+								<tr >
+									<td align = "right">Total Cost:</td>
+									<td>TK.{{total}}</td>
+								
+									<td >{{cart.p_qty}}</td>
+								</tr>
+								<tr><td><a href="index.html" class="add-check btn btn-info"  style="font-family: fantasy">Checkout</a></td></tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+	</div>
+	<div class = "col-md-9 well" style="background-color: rgb(236, 255, 205)">
+
+	
+		<div>
+			<h1 style="text-align: center;font-family: fantasy;background-color: chartreuse;text-size-adjust: 20px">Collect your Product<h1>
+					<hr style = "border-top:1px solid #ccc;"/>
+			<div  style="font-family: fantasy;font-size: 20px">
+				<div id = "p_list" ng-repeat = "product in products " style="font-size: 20px">
+					
+					<center><img ng-src = "{{product.p_image}}"/></center>
+					{{product.p_name}}<br>
+					Price: {{product.p_price}}<br>
+				
+					<center><button type = "button" class="btn-info" ng-click = "add_cart(product)"><span class = "glyphicon glyphicon-shopping-cart"></span> Add to cart</button></center>
+				</div>
+			</div>
+		</div></div>
+
+		<div id="add-check" class="modal fade width=200px"  role="dialog" >
+				<div class="modal-dialog">
+		
+					<!-- Modal content-->
+					<div class="modal-content"  >
+					  <!-- <form >
+						<input type="text" name="userId" ng-model="userId" />
+						<input type="password" name="password" ng-model="password" />
+						<button type="submit" ng-click="login()" >Submit</button>
+						<a href="#!signUp" >SignUp</a>
+					</form> -->
+						<div class="modal-header login-header">
+							<button type="button" class="close" data-dismiss="modal">×</button>
+						 
+							<h3 class="modal-title" style="background-color: rgb(59, 238, 238); font-family:fantasy; text-align:center">Customer Login</h3>
+						</div>
+						<div class="modal-body" style="background-color: rgb(62, 247, 247);" >
+						  <form>
+							<div class="input-group form-group" >
+							  <div class="input-group-prepend">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							  </div>
+							  <input type="text" class="form-control" placeholder="username"   ng-model="userId" name="userId">
+							  
+							</div>
+							<div class="input-group form-group"  >
+							  <div class="input-group-prepend">
+								<span class="input-group-text"><i class="fas fa-key"></i></span>
+							  </div>
+							  <input type="password" class="form-control" placeholder="password" ng-model="password" name="password">
+							</div>
+							<div class="row align-items-center remember">
+							  <input type="checkbox">Remember Me
+							</div>
+						 
+						  </form>
+							</div>
+						<div class="modal-footer" >
+							<button class="btn btn-info" class="cancel" data-dismiss="modal"  ng-click="check()" >Sign In</button>
+							<button class="btn btn-info"  class="add-project" data-dismiss="modal">Reset</button>
+						</div>
+					</div>
+		
+				</div>
+			</div>
+
+
+		
+  
+  
+	
+</body>	
+</html>

@@ -4,9 +4,10 @@
                 <div class="card" style="width:200px;background-color: lightcyan">
                         <img class="card-img-top" src="image\2813922.jpg" alt="Card image" style="width:100%">
                         <div class="card-body" style="font-family: fantasy">
+                          <h4 class="card-title"  ng-repeat="item in inventory | filter:searchText | orderBy:'category' ">{{ item.description }}</h4>
                           <h4 class="card-title">**Apple Jam**</h4>
                           <p class="card-text">Price 250 TK</p>
-                          <a href="#" class="btn btn-info">Add To Cart</a>
+                          <a href="#" class="btn btn-info" ng-click="addItem(item)">Add To Cart</a>
                         </div>
                       </div>
         </div>
@@ -71,4 +72,6 @@
       <a href="#" class="btn btn-info">Add To Cart</a>
     </div>
   </div></div>
+</div>
+
 </div>

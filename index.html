@@ -2,14 +2,15 @@
 	<html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
         <script src="./angularjs/angular.js"></script>
-        <script src="angularjs/angular-route.js"></script>
-        <script src="app/user.js" ></script>
+        <script src="./angularjs/angular-route.js"></script>
+        <script src="./app/user.js" ></script>
+      	<script src = "./js/app.js"></script>
         <!-- <script src="bootstrap/js/bootstrap.js"></script> -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+        <script src="./jquery-3.3.1.min.js"></script>
+        <script src="./Popper/popper.min.js"></script>
+        <script src="./bootstrap/js/bootstrap.min.js"></script>
        <style>
                         #bor {
                            color: black;
@@ -34,29 +35,23 @@
   color: white;
   border-radius: 0 5px 5px 0;
 }
-
 #mySidenav a:hover {
   left: 0;
 }
-
-
-
 #blog {
   top: 80px;
   background-color: #2196F3;
 }
-
 #projects {
   top: 140px;background-color: #f44336;
 }
-
 #contact {
   top: 200px;
   background-color:aquamarine;
 }
-                        </style>
+ </style>
 </head>
-        <body ><nav class="navbar navbar-expand-bg bg-warning navbar-dark ">
+        <body   style="font-family: fantasy"><nav class="navbar navbar-expand-bg  navbar-dark " style="background-color:rgb(158, 255, 30);">
               
                 <div class="navbar >
                     <a  href="#" style="color: black; font-family: fantasy ;width: max-content"> <i class="fas fa-clock" style="color: red"></i>Hotline (+088 0191177555) 9:00 AM - 2 :00 PM  </a>
@@ -81,13 +76,13 @@
                           <h6 style="color: black; font-family: fantasy">home> online Shop> bye&sale> home delivery> stay safe>satisfaction<i class="fa fa-fw fa-heart"style="color: red"></i></h6>
                       
                           <div class="dropdown">                                                             
-  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bars"></i >Menu</button>
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="font-family: fantasy"><i class="fas fa-bars"></i >Menu</button>
      
-    <a href="#" class="add-project btn btn-danger" data-toggle="modal" data-target="#add_project"><i class="fa fa-fw fa-user""></i >Login</a>
-  <button type="button" class="btn btn-success"><i class="fas fa-file"></i> Register</button>
+    <a href="#" class="add-project btn btn-danger" data-toggle="modal" data-target="#add_project" style="font-family: fantasy"><i class="fa fa-fw fa-user""></i >Login</a>
+      <a href="#" class="add-reg btn btn-success" data-toggle="modal" data-target="#add_reg" style="font-family: fantasy"><i class="fa fa-fw fa-file"></i >Registred</a>
 
-  <button type="button" class="btn btn-warning"><i class="fas fa-car"></i> Home Delivery</button>
-  <button type="button" class="btn btn-info"> More Shopping</button>
+        <a href="cart.html" class="btn btn-warning"><i class="fa fa-fw fa-car" style="font-family: fantasy"></i> Todays Discount 5%</a>
+        <a href="#" class="btn btn-info" style="font-family: fantasy"> More Shopping</a>
   <div class="dropdown-menu" style="background-color: azure">
     <a class="dropdown-item" href="#">*Daily Product*</a>
     <a class="dropdown-item" href="#">*Home Product* </a>
@@ -95,7 +90,7 @@
   </div></div>
   <br><br>
  <br>
-  <div class="active-pink-2 mb-2" ng-controller="myctrl">
+  <div class="active-pink-2 mb-2" ng-controller="myCtrl">
       <input class="form-control" type="text" placeholder="Search" ng-model="searchBox" aria-label="Search">    
     </div>
 
@@ -104,6 +99,8 @@
 
    <div class="col-sm-1" ><img src="image\Cart_i4-128.png"></img>  </div> 
 </div><br>
+<marquee style="color:black; font-weight: bold; font-size: 30px; font-family: fantasy; background-color: rgb(158, 255, 30);">Notice: All price are appromaximate ,product will be delivered from current store/body price.For any changes , you will get a call from 166456 before delivery</marquee>
+<br>
 
 <div  ng-app="appMy">
 
@@ -155,7 +152,9 @@
         <a class="carousel-control-next" href="#" data-slide="next">
           <span class="carousel-control-next-icon"></span>
         </a>
-      </div> </div></div><br><br><br>
+      </div> </div></div><br>
+     
+      <br><br>
 
 
       <div class=" row">
@@ -173,8 +172,9 @@
             
                 <p><a href="#!login" style="color:black; font-weight: bold; font-family: fantasy" class="btn btn-light">*** OUR OWN FOOD ***</a></p>
                 <p ><a href="#!login - Copy" style="color: black;font-weight: bold; font-family: fantasy" class="btn btn-light">***BABY FOOD & CARE***</a></p> 
-                <p ><a href="#!login" style="color: black; font-weight: bold;font-family: fantasy" class="btn btn-light">***CHOCOLATE & CANDI***</a></p> 
-                <p ><a href="#!login" style="color: black; font-weight: bold;font-family: fantasy" class="btn btn-light">***FRUIT & VAGITABLE***</a></p> 
+                <p ><a href="#!choclate" style="color: black; font-weight: bold;font-family: fantasy" class="btn btn-light">***CHOCOLATE & CANDI***</a></p> 
+               <p ><a href="#!vagitable" style="color: black; font-weight: bold;font-family: fantasy" class="btn btn-light">***FRESH  VAGITABLE***</a></p>
+               <p ><a href="#!fruit" style="color: black; font-weight: bold;font-family: fantasy" class="btn btn-light">***FRESH FRUIT ***</a></p>
                 <p ><a href="#!login" style="color: black; font-weight: bold;font-family: fantasy" class="btn btn-light">***FRESH MEAT & FISH***</a></p> 
                 <p ><a href="#!login" style="color: black; font-weight: bold;font-family: fantasy" class="btn btn-light">*** BREAD & CAKE ***</a></p> 
                 <p ><a href="#!login" style="color: black; font-weight: bold;font-family: fantasy" class="btn btn-light">*** DAIRY PRODUCT ***</a></p> 
@@ -185,43 +185,43 @@
             
 
         </div><br><br><br><br>
-  
+      
          <div class="col-sm-9" >
-                        <ng-view></ng-view>
+          <ng-view></ng-view>    
                       
 <div class="row" style="background-color:lightcyan">
   <div class="col-sm-3">
           <div class="card" style="width:200px;background-color: lightcyan">
                   <img class="card-img-top" src="image\3369944.jpg" alt="Card image" style="width:100%">
                   <div class="card-body" style="font-family: fantasy">
-                    <h4 class="card-title">**T-SHIRT**</h4>
+                    <h4 class="card-title">**T-shirt**</h4>
                     <p class="card-text">Price 550 TK</p>
-                    <a href="#" class="btn btn-info">Add To Cart</a>
+                    <a href="#" class="add-project btn btn-info" data-toggle="modal" data-target="#add_project" style="font-family: fantasy">Add To Cart</a>
                   </div>
                 </div>
   </div>
   <div class="col-sm-3">   <div class="card" style="width:200px;background-color: lightcyan">
     <img class="card-img-top" src="image\3369929.jpg" alt="Card image" style="width:100%">
     <div class="card-body" style="font-family: fantasy">
-      <h4 class="card-title">**T-SHIRT**</h4>
+      <h4 class="card-title">**T-shirt**</h4>
       <p class="card-text">Price 550 TK</p>
-      <a href="#" class="btn btn-info">Add To Cart</a>
+      <a href="#" class="add-project btn btn-info" data-toggle="modal" data-target="#add_project" style="font-family: fantasy">Add To Cart</a>
     </div>
   </div></div>
   <div class="col-sm-3">   <div class="card" style="width:200px;background-color: lightcyan">
     <img class="card-img-top" src="image\3369934.jpg" alt="Card image" style="width:100%">
     <div class="card-body" style="font-family: fantasy">
-      <h4 class="card-title">**T-SHIRT**</h4>
+      <h4 class="card-title">**T-shirt**</h4>
       <p class="card-text">Price 550 TK</p>
-      <a href="routes/loginfinal.html" class="btn btn-info">Add To Cart</a>
+      <a href="#" class="add-project btn btn-info" data-toggle="modal" data-target="#add_project" style="font-family: fantasy">Add To Cart</a>
     </div>
   </div></div>
   <div class="col-sm-3">   <div class="card" style="width:200px;background-color: lightcyan">
     <img class="card-img-top" src="image\3369944.jpg" alt="Card image" style="width:100%">
     <div class="card-body" style="font-family: fantasy">
-      <h4 class="card-title">**T-SHIRT**</h4>
+      <h4 class="card-title">**T-shirt**</h4>
       <p class="card-text">Price 550 TK</p>
-      <a href="#" class="btn btn-info">Add To Cart</a>
+      <a href="#" class="add-project btn btn-info" data-toggle="modal" data-target="#add_project" style="font-family: fantasy">Add To Cart</a>
     </div>
   </div></div>
 </div>
@@ -231,34 +231,34 @@
     <div class="card" style="width:200px;background-color: lightcyan">
             <img class="card-img-top" src="image\3372170.jpg" alt="Card image" style="width:100%">
             <div class="card-body" style="font-family: fantasy">
-              <h4 class="card-title">**Chirar Moya**</h4>
+              <h4 class="card-title">**Ladis Tops**</h4>
               <p class="card-text">Price 550 TK</p>
-              <a href="#" class="btn btn-info">Add To Cart</a>
+              <a href="#" class="add-project btn btn-info" data-toggle="modal" data-target="#add_project" style="font-family: fantasy">Add To Cart</a>
             </div>
           </div>
 </div>
 <div class="col-sm-3">   <div class="card" style="width:200px;background-color: lightcyan">
 <img class="card-img-top" src="image\3371760.jpg" alt="Card image" style="width:100%">
 <div class="card-body" style="font-family: fantasy">
-<h4 class="card-title">**Murali**</h4>
+<h4 class="card-title">**Ladis Tops**</h4>
 <p class="card-text">Price 550 TK</p>
-<a href="#" class="btn btn-info">Add To Cart</a>
+<a href="#" class="add-project btn btn-info" data-toggle="modal" data-target="#add_project" style="font-family: fantasy">Add To Cart</a>
 </div>
 </div></div>
 <div class="col-sm-3">   <div class="card" style="width:200px;background-color: lightcyan">
 <img class="card-img-top" src="image\3372068.jpg" alt="Card image" style="width:100%">
 <div class="card-body" style="font-family: fantasy">
-<h4 class="card-title">**Chira Vaja**</h4>
+<h4 class="card-title">**Ladis Tops**</h4>
 <p class="card-text">Price 550 TK</p>
-<a href="#" class="btn btn-info">Add To Cart</a>
+<a href="#" class="add-project btn btn-info" data-toggle="modal" data-target="#add_project" style="font-family: fantasy">Add To Cart</a>
 </div>
 </div></div>
 <div class="col-sm-3">   <div class="card" style="width:200px;background-color: lightcyan">
 <img class="card-img-top" src="image\3372166.jpg" alt="Card image" style="width:100%">
 <div class="card-body" style="font-family: fantasy">
-<h4 class="card-title">**Narcel naru**</h4>
+<h4 class="card-title">**Ladis Tops**</h4>
 <p class="card-text">Price 550 TK</p>
-<a href="#" class="btn btn-info">Add To Cart</a>
+<a href="#" class="add-project btn btn-info" data-toggle="modal" data-target="#add_project" style="font-family: fantasy">Add To Cart</a>
 </div>
 </div></div>
 </div><br><br><br><br> 
@@ -314,6 +314,65 @@
           </div>
       </div>
      
+
+
+
+
+
+
+
+
+      
+      <div id="add_reg" class="modal fade width=200px"  role="dialog" >
+          <div class="modal-dialog">
+  
+              <!-- Modal content-->
+              <div class="modal-content"  ng-app="appMy" ng-controller="myCtrl">
+                <!-- <form >
+                  <input type="text" name="userId" ng-model="userId" />
+                  <input type="password" name="password" ng-model="password" />
+                  <button type="submit" ng-click="login()" >Submit</button>
+                  <a href="#!signUp" >SignUp</a>
+              </form> -->
+                  <div class="modal-header login-header">
+                      <button type="button" class="close" data-dismiss="modal">×</button>
+                   
+                      <h3 class="modal-title" style="background-color: rgb(59, 238, 238); font-family:fantasy; text-align:center">Customer Login</h3>
+                  </div>
+                  <div class="modal-body" style="background-color: rgb(62, 247, 247);" >
+                    <form>
+                      <div class="input-group form-group" >
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="userid"   >
+                        
+                      </div>
+                      <div class="input-group form-group" >
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                          </div>
+                          <input type="text" class="form-control" placeholder="username"  >
+                          
+                        </div>
+                      <div class="input-group form-group"  >
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <input type="password" class="form-control" placeholder="password" >
+                      </div>
+                    
+                   
+                    </form>
+                      </div>
+                  <div class="modal-footer" >
+                      <button class="btn btn-info" class="cancel" data-dismiss="modal"  ng-click="signUp()" >Submitt</button>
+                      <button class="btn btn-info"  class="add-project" data-dismiss="modal">Reset</button>
+                  </div>
+              </div>
+  
+          </div>
+      </div>
 
 
         </body>

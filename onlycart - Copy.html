@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<script src = "js/angular.js"></script>
+		<script src = "js/app.js"></script>
+		<meta charset = "UTF-8" name = "viewport" content = "width=device-width, initial-scale=1" />
+		<link rel = "stylesheet" type = "text/css" href = "css/bootstrap.css"/>
+		<link rel = "stylesheet" type = "text/css" href = "css/style.css"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</head>
+<body ng-app = "myModule" ng-controller = "myController" >
+		<nav class="navbar navbar-expand-bg  navbar-dark " style="background-color:rgb(158, 255, 30);">
+              
+                <div class="navbar" style="color: black; font-family: fantasy ;">
+                    <a  href="#" style="color: black; font-family: fantasy ;width: max-content"> <i class="fas fa-clock" style="color: red"></i>Hotline (+088 0191177555) 9:00 AM - 2 :00 PM  </a>
+                    <a class="active" href="#" style="color: black;">| |<i class="fa fa-fw fa-home"></i> Home  </a>
+                 
+                    <a href="#" style="color: black;">| |<i class="fa fa-fw fa-envelope"></i> Contact  </a>
+                     <a href="#" style="color: black;">| |<i class="fas fa-band-aid"></i> Help</a>
+                  </div>
+                  <form class="form-inline float-right" >
+                      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                      <button class="btn btn-info" type="submit"><i class="fa fa-fw fa-search"></i>Search</button>
+                      
+                    </form>
+                    </nav>
+              
+	<!-- <div class = "col-md-2"></div>
+	<div class = "col-md-10 well" style="background-color: blanchedalmond">
+
+		<hr style = "border-top:1px solid #ccc;"/>
+		<div  >
+			<h4>PRODUCTS<h4>
+		
+			<div  style="font-family: fantasy">
+				<div id = "p_list" ng-repeat = "product in products ">
+					<h5>{{product.p_name}}</h5>
+					<center><img ng-src = "{{product.p_image}}"/></center>
+					Price: {{product.p_price}}<br>
+					Price: {{product.p_qty}}
+					<center><button type = "button" class="btn-info" ng-click = "add_cart(product)"><span class = "glyphicon glyphicon-shopping-cart"></span> Add to cart</button></center>
+				</div>
+			</div>
+		</div></div> -->
+		<div class = "pull-right col-md-5">
+			<div class = "panel panel-primary">
+				<div class = "panel-heading">
+					<h5>MY CART</h5>
+				</div>
+				<div class = "panel-body table-responsive">
+					<table class = "table">
+						<thead>
+							<tr>
+								<th>Product</th>
+								<th>Price</th>
+								<th>Quantity</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody ng-repeat = "product in products ">
+							<tr ng-repeat = "cart in carts" ng-init = "setTotals(cart)">
+								<td>{{cart.p_name}}</td>
+								<td>TK.{{cart.p_price}}</td>
+								<th>{{cart.p_qty}}</th>
+								<td><button type = "button" ng-click = "remove_cart(cart)" class = "btn btn-danger"><span class = "glyphicon glyphicon-remove"></span>Remove item</button></td>
+							</tr>
+							<tr ng-init = "setqt(cart)">
+								<td align = "right">Total</td>
+								<td>₱{{total}}</td>
+								<td align = "right">Quantity</td>
+								<td>{{qt}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	
+</body>	
+</html>

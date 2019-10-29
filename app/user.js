@@ -4,9 +4,24 @@ app1.config(function($routeProvider){
 		templateUrl: "routes/login.html"
     }).when("/login - Copy",{
         templateUrl: "routes/login - Copy.html"
-    })
+    }).when("/vagitable",{
+        templateUrl: "routes/vagitable.html"
+
+        }).when("/fruit",{
+            templateUrl: "routes/fruit.html"
+        }).when("/choclate",{
+            templateUrl:"routes/choclate.html"
+        })
   console.log("nvkjfbnkfjxdb");
 });
+// var app2 = angular.module('appMy2', ['ngRoute']);
+// app2.config(function($routeProvider){
+// 	$routeProvider.when("/submenu",{
+//          templateUrl: "routes/submenu.html"
+
+//         })
+ 
+// });
 
 app1.controller('myCtrl', function($scope, $http) {
   $scope.login = function() {
@@ -17,7 +32,7 @@ app1.controller('myCtrl', function($scope, $http) {
         if(response.data == true){
            
             alert("Login successfull")
-            window.location.href="/todo.html"
+            window.location.href="/onlycart.html"
         } else{
             alert("Unsuccessfull login")
         }
@@ -25,7 +40,7 @@ app1.controller('myCtrl', function($scope, $http) {
 };
 $scope.signUp = function() {
     // store to db
-    alert($scope.userId)
+    alert("Successfully registred")
 }
 
 function getData() {
@@ -34,6 +49,15 @@ function getData() {
         $scope.data = res.data;
     })
 }
-getData()
-})
+getData();
+
+$scope.check=function(){
+alert("Thank you for shopping from us...stay safe and we will deliver your product");
+}
+
+
+
+
+
+});
 
